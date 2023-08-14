@@ -1,0 +1,101 @@
+{% load static %}
+    <!-- Sidebar -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+    </a>
+
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{% static "dist/img/user2-160x160.jpg" %}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">{{ user.username }}</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="/themNhanVien" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Them Nhan Vien
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/quanlyNhanVien" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Quan ly nhan vien
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/themGiaoVien" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Them giao Vien
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/quanlyGiaoVien" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Quan ly giao vien
+              </p>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="/themLop" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Them Lop
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/quanlyLop" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Quan ly lop
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/themMonHoc" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Them mon hoc
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/quanlyMonHoc" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Quan ly mon hoc
+              </p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

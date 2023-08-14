@@ -1,0 +1,43 @@
+{% extends 'nhanvien_templates/base.html' %}
+{% block page_title %}
+CHINH SUA LOP  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
+{% endblock page_title %}
+{% block main_content %}
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Xoa lop</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" action="/NVluuxoaLop" method="post">
+                  {% csrf_token %}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Ten lop</label>
+                        <input type="text" class="form-control" name="tenlop" placeholder="Ten lop" value="{{ v_lop.tenlop }}" readonly>
+                        <input type="hidden"  name="malop" value="{{ v_lop.malop }}" readonly>
+                    </div>
+
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(176, 0, 0);">Xoa lop</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+
+
+          </div>
+          </div>
+      </div>
+    </section>
+    <!-- /.content -->
+{% endblock main_content %}

@@ -1,0 +1,79 @@
+{% extends 'giaovien_templates/base.html' %}
+{% block page_title %}
+Manage Teacher
+{% endblock page_title %}
+{% block main_content %}
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+
+           <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Teacher Details</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>MaHS</th>
+                      <th>Ho va ten</th>
+                      <th>Ngay sinh</th>
+                      <th>Gioi tinh</th>
+                      <th>Dia chi</th>
+                      <th>Ten bo</th>
+                      <th>SDT bo</th>
+                      <th>Email bo</th>
+                      <th>Ten me</th>
+                      <th>SDT me</th>
+                      <th>Email me</th>
+                      <th>Hanh dong</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for entry in hocsinh %}
+                  {% if entry.malop.tenlop == user.giaovien.malop.tenlop %}
+                    <tr>
+                      <td>{{ entry.mahs }}</td>
+                      <td>{{ entry.hovaten }}</td>
+                      <td>{{ entry.ngaysinh }}</td>
+                      <td>{{ entry.gioitinh }}</td>
+                      <td>{{ entry.diachi }}</td>
+                      <td>{{ entry.tenbo }}</td>
+                      <td>{{ entry.sdtbo }}</td>
+                      <td>{{ entry.emailbo }}</td>
+                      <td>{{ entry.tenme }}</td>
+                      <td>{{ entry.sdtme }}</td>
+                      <td>{{ entry.emailme }}</td>
+                      <td>
+                        <a href="/chinhsuaHocSinh/{{ entry.mahs }}" class="btn btn-success">Sua</a>
+                        <a href="/xoaHocSinh/{{ entry.mahs }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xoa</a>
+                    </td>
+                    </tr>
+                  {% endif %}
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+{% endblock main_content %}

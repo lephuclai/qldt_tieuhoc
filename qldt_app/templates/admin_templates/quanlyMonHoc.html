@@ -1,0 +1,61 @@
+{% extends 'admin_templates/base.html' %}
+{% block page_title %}
+Quan ly mon hoc
+{% endblock page_title %}
+{% block main_content %}
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+
+           <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Thong mon hoc</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>Ma mon hoc</th>
+                      <th>Ten mon hoc</th>
+                      <th>So tiet</th>
+                      <th>Hanh dong</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for entry in monhoc %}
+                    <tr>
+                      <td>{{ entry.mamonhoc }}</td>
+                      <td>{{ entry.tenmonhoc }}</td>
+                      <td>{{ entry.sotiet }}</td>
+                      <td>
+                        <a href="/chinhsuaMonHoc/{{ entry.mamonhoc }}" class="btn btn-success">Sua</a>
+                        <a href="/xoaMonHoc/{{ entry.mamonhoc }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xoa</a>
+                    </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+{% endblock main_content %}

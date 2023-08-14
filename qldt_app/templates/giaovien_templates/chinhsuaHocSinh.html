@@ -1,0 +1,103 @@
+{% extends 'giaovien_templates/base.html' %}
+{% block page_title %}
+Chinh sua hoc sinh
+{% endblock page_title %}
+{% block main_content %}
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Edit Staff</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" action="/luuchinhsuaHocSinh" method="post">
+                  {% csrf_token %}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Ho va ten</label>
+                        <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten" value="{{ hocsinh.hovaten }}">
+                        <input type="hidden"  name="mahs" value="{{ hocsinh.mahs }}">
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <label>Ngay sinh</label>
+                        <input type="text" class="form-control" name="ngaysinh" placeholder="Ngay sinh" onfocus="(this.type='date')" onblur="(this.type='text')" value="{{ giaovien.admin.ngaysinh }}">
+                    </div> -->
+                    
+                    <div class="form-group">
+                        <label>Gioi tinh</label>
+                        <input type="text" class="form-control" name="gioitinh" placeholder="Gioi tinh" value="{{ hocsinh.gioitinh }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dia chi</label>
+                        <input type="text" class="form-control" name="diachi" placeholder="Dia chi" value="{{ hocsinh.diachi }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ten bo</label>
+                        <input type="text" class="form-control" name="tenbo" placeholder="Ten bo" value="{{ hocsinh.tenbo }}">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email bo</label>
+                      <input type="email" class="form-control" name="emailbo" placeholder="Email bo" value="{{ hocsinh.emailbo }}">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label>So dien thoai bo</label>
+                      <input type="text" class="form-control" name="sdtbo" placeholder="So dien thoai bo" value="{{ hocsinh.sdtbo }}">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Ten me</label>
+                        <input type="text" class="form-control" name="tenme" placeholder="Ten me" value="{{ hocsinh.tenme }}" >
+                    </div>
+
+                    <div class="form-group">
+                        <label>So dien thoai me</label>
+                        <input type="text" class="form-control" name="sdtme" placeholder="So dien thoai me" value="{{ hocsinh.sdtme }}">
+                      </div>    
+
+                    <div class="form-group">
+                      <label>Email me</label>
+                      <input type="email" class="form-control" name="emailme" placeholder="Email me" value="{{ hocsinh.emailme }}">
+                    </div>
+                            
+ 
+                      <div class="form-group">
+                      {% if messages %}
+                        {% for message in messages %}
+                        {% if message.tags == 'error' %}
+                        <div class="alert alert-danger" style="margin-top:10px">{{ message }}</div>
+                        {% endif %}
+                        {% if message.tags == 'success' %}
+                        <div class="alert alert-success" style="margin-top:10px">{{ message }}</div>
+                        {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                    </div>
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary btn-block">Save Staff</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+
+
+          </div>
+          </div>
+      </div>
+    </section>
+    <!-- /.content -->
+{% endblock main_content %}

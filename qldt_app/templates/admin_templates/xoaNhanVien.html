@@ -1,0 +1,53 @@
+{% extends 'admin_templates/base.html' %}
+{% block page_title %}
+Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.admin.mand }}
+{% endblock page_title %}
+{% block main_content %}
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Xoa nhan vien</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" action="/luuxoaNhanVien" method="post">
+                  {% csrf_token %}
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Ho va ten</label>
+                        <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten" value="{{ nhanvien.admin.hovaten }}" readonly>
+                        <input type="hidden"  name="mand" value="{{ nhanvien.admin.mand }}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter email" value="{{ nhanvien.admin.email }}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Vi tri</label>
+                        <input type="text" class="form-control" name="vitri" placeholder="Vi tri" value="{{ nhanvien.vitri }}" readonly>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(176, 0, 0);">Xoa nhan vien</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+
+
+          </div>
+          </div>
+      </div>
+    </section>
+    <!-- /.content -->
+{% endblock main_content %}
