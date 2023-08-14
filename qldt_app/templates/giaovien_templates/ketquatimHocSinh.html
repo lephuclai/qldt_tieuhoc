@@ -1,6 +1,6 @@
 {% extends 'giaovien_templates/base.html' %}
 {% block page_title %}
-Manage Teacher
+Ket qua tim hoc sinh
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -44,20 +44,19 @@ Manage Teacher
                     </tr>
                   </thead>
                   <tbody>
-                  {% for entry in hocsinh %}
-                  {% if entry.malop.tenlop == user.giaovien.malop.tenlop %}
+                  {% if hocsinh.malop.tenlop == user.giaovien.malop.tenlop %}
                     <tr>
-                      <td>{{ entry.mahs }}</td>
-                      <td>{{ entry.hovaten }}</td>
-                      <td>{{ entry.ngaysinh }}</td>
-                      <td>{{ entry.gioitinh }}</td>
-                      <td>{{ entry.diachi }}</td>
-                      <td>{{ entry.tenbo }}</td>
-                      <td>{{ entry.sdtbo }}</td>
-                      <td>{{ entry.emailbo }}</td>
-                      <td>{{ entry.tenme }}</td>
-                      <td>{{ entry.sdtme }}</td>
-                      <td>{{ entry.emailme }}</td>
+                      <td>{{ hocsinh.mahs }}</td>
+                      <td>{{ hocsinh.hovaten }}</td>
+                      <td>{{ hocsinh.ngaysinh }}</td>
+                      <td>{{ hocsinh.gioitinh }}</td>
+                      <td>{{ hocsinh.diachi }}</td>
+                      <td>{{ hocsinh.tenbo }}</td>
+                      <td>{{ hocsinh.sdtbo }}</td>
+                      <td>{{ hocsinh.emailbo }}</td>
+                      <td>{{ hocsinh.tenme }}</td>
+                      <td>{{ hocsinh.sdtme }}</td>
+                      <td>{{ hocsinh.emailme }}</td>
                       <td>
                         <a href="/chinhsuaHocSinh/{{ entry.mahs }}" class="btn btn-success">Sua</a>
                         <a href="/xoaHocSinh/{{ entry.mahs }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xoa</a>
@@ -66,7 +65,6 @@ Manage Teacher
                     </td>
                     </tr>
                   {% endif %}
-                  {% endfor %}
                   </tbody>
                 </table>
               </div>

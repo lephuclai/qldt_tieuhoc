@@ -72,16 +72,16 @@ urlpatterns = [
     path('luuchinhsuaHocSinh', giaovienViews.luuchinhsuaHocSinh, name='luuchinhsuaHocSinh'),
     path('xoaHocSinh/<str:mahs>', giaovienViews.xoaHocSinh, name='xoaHocSinh'),
     path('luuxoaHocSinh', giaovienViews.luuXoaHocSinh, name='luuxoaHocSinh'),
-    # path('thongkeDiemLop', giaovienViews.thongkeDiemLop, name='thongkeDiemLop'),
-    # path('baocaoHocSinh', giaovienViews.baocaoHocSinh, name='baocaoHocSinh'),
+    path('timHocSinh', giaovienViews.timHocSinh, name='timHocSinh'),
+    path('ketquatimHocSinh', giaovienViews.ketquatimHocSinh, name='ketquatimHocSinh'),
+    # path('thongkeDiemLop/<str:malop>', giaovienViews.thongkeDiemLop, name='thongkeDiemLop'),
     
-    # path('themDiem', giaovienViews.themDiem),
-    # path('luuDiem', giaovienViews.luuDiem),
-    # path('quanlyDiem', giaovienViews.quanlyDiem),
-    # path('chinhsuaDiem/<str:maxulydiem>', giaovienViews.chinhsuaDiem, name='chinhsuaDiem'),
-    # path('luuchinhsuaDiem', giaovienViews.luuchinhsuaDiem, name='luuchinhsuaDiem'),
-    # path('xoaDiem/<str:maxulydiem>', giaovienViews.xoaDiem, name='xoaDiem'),
-    # path('luuxoaDiem', giaovienViews.luuXoaDiem, name='luuxoaDiem'),
-
+    path('themDiem/<str:mahs>', giaovienViews.themDiem, name='themDiem'),
+    path('luuDiem', giaovienViews.luuDiem),
+    path('quanlyDiem/<str:mahs>', giaovienViews.quanlyDiem),
+    path('chinhsuaDiem/<str:maxulydiem>', giaovienViews.chinhsuaDiem, name='chinhsuaDiem'),
+    path('luuchinhsuaDiem', giaovienViews.luuchinhsuaDiem, name='luuchinhsuaDiem'),
+    path('xoaDiem/<str:maxulydiem>', giaovienViews.xoaDiem, name='xoaDiem'),
+    path('luuxoaDiem', giaovienViews.luuXoaDiem, name='luuxoaDiem'),
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

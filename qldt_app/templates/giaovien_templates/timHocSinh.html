@@ -1,6 +1,6 @@
 {% extends 'giaovien_templates/base.html' %}
 {% block page_title %}
-Them diem
+Tim hoc sinh
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -15,39 +15,13 @@ Them diem
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="/luuDiem" method="post">
+              <form role="form" action="/ketquatimHocSinh" method="post">
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
                         <label>Ho va ten</label>
-                        <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten" value="{{ hocsinh.hovaten }}" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Ma hoc sinh</label>
-                        <input type="text" class="form-control" name="mahs" placeholder="Ma hoc sinh" value="{{ hocsinh.mahs }}" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Ngay sinh</label>
-                        <input type="text" class="form-control" name="ngaysinh" placeholder="Ngay sinh" value="{{ hocsinh.ngaysinh }}" readonly>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Ten mon hoc</label>
-                        <input type="text" class="form-control" name="tenmonhoc" placeholder="Ten mon hoc">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Muc dat duoc</label>
-                        <input type="text" class="form-control" name="mucdatduoc" placeholder="Muc dat duoc">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Diem kiem tra dieu kien</label>
-                        <input type="text" class="form-control" name="diem" placeholder="Diem">
-                    </div>
-                            
+                        <input type="text" class="form-control" name="tenhs" placeholder="Ho va ten">
+                    </div>  
  
                       <div class="form-group">
                       {% if messages %}
@@ -66,7 +40,7 @@ Them diem
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Save Staff</button>
+                  <button type="submit" class="btn btn-primary btn-block">Tim hoc sinh</button>
                 </div>
               </form>
             </div>

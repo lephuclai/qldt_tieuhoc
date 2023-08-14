@@ -170,3 +170,15 @@ def luuXoaLop(request):
             return HttpResponseRedirect("/NVquanlyLop")
         except:
             return HttpResponseRedirect("/NVquanlyLop")
+
+# def timGiaoVien(request):
+#     return render(request,"nhanvien_templates/timGiaoVien.html")
+
+# def ketquatimGiaoVien(request):
+#     tengv=request.POST.get('tengv')
+#     try:
+#         giaovien=giaoVien.objects.get(hovaten=tengv)
+#         return render(request, "nhanvien_templates/ketquatimGiaoVien.html", {'giaovien': giaovien})
+#     except:
+#         messages.error(request,"Khong tim duoc giao vien")
+#         return render(request, "nhanvien_templates/timGiaoVien.html")
