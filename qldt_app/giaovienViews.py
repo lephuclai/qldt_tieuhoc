@@ -140,7 +140,7 @@ def luuDiem(request):
         
 def quanlyDiem(request, mahs):
     v_diem=diem.objects.all()
-    hocsinh=hocSinh.objects.all()
+    hocsinh=hocSinh.objects.get(mahs=mahs)
     return render(request, 'giaovien_templates/quanlyDiem.html', {'v_diem':v_diem, 'mahs':mahs, 'hocsinh':hocsinh})
 
 def chinhsuaDiem(request, maxulydiem):

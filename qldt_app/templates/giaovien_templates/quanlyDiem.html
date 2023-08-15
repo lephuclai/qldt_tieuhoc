@@ -34,9 +34,8 @@ Xem diem hoc sinh
                     </tr>
                   </thead>
                   <tbody>
-                  {% for entry_hs in hocsinh %}
                   {% for entry in v_diem %}
-                  {% if entry.mahs.mahs == entry_hs.mahs %}
+                  {% if entry.mahs.mahs == hocsinh.mahs %}
                     <tr>
                       <td>{{ entry.maxulydiem }}</td>
                       <td>{{ entry.mahs.mahs }}</td>
@@ -49,7 +48,6 @@ Xem diem hoc sinh
                       </td>
                     </tr>
                   {% endif %}
-                  {% endfor %}
                   {% endfor %}
                   </tbody>
                 </table>
