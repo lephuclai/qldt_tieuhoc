@@ -171,14 +171,26 @@ def luuXoaLop(request):
         except:
             return HttpResponseRedirect("/NVquanlyLop")
 
-# def timGiaoVien(request):
-#     return render(request,"nhanvien_templates/timGiaoVien.html")
+def timGiaoVien(request):
+    return render(request,"nhanvien_templates/timGiaoVien.html")
 
-# def ketquatimGiaoVien(request):
-#     tengv=request.POST.get('tengv')
-#     try:
-#         giaovien=giaoVien.objects.get(hovaten=tengv)
-#         return render(request, "nhanvien_templates/ketquatimGiaoVien.html", {'giaovien': giaovien})
-#     except:
-#         messages.error(request,"Khong tim duoc giao vien")
-#         return render(request, "nhanvien_templates/timGiaoVien.html")
+def ketquatimGiaoVien(request):
+    tengv=request.POST.get('tengv')
+    try:
+        giaovien=nguoiDung.objects.get(hovaten=tengv)
+        return render(request, "nhanvien_templates/ketquatimGiaoVien.html", {'giaovien': giaovien})
+    except:
+        messages.error(request,"Khong tim duoc giao vien")
+        return render(request, "nhanvien_templates/timGiaoVien.html")
+    
+def timLop(request):
+    return render(request,"nhanvien_templates/timLop.html")
+
+def ketquatimLop(request):
+    tenlop=request.POST.get('tenlop')
+    try:
+        v_lop=lop.objects.get(tenlop=tenlop)
+        return render(request, "nhanvien_templates/ketquatimLop.html", {'v_lop': v_lop})
+    except:
+        messages.error(request,"Khong tim duoc lop")
+        return render(request, "nhanvien_templates/timLop.html")

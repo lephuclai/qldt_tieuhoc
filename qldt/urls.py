@@ -24,6 +24,8 @@ urlpatterns = [
     path('luuchinhsuaNhanVien', adminViews.luuchinhsuaNhanVien, name='luuchinhsuaNhanVien'),
     path('xoaNhanVien/<str:mand>', adminViews.xoaNhanVien, name='xoaNhanVien'),
     path('luuxoaNhanVien', adminViews.luuXoaNhanVien, name='luuxoaNhanVien'),
+    path('timNhanVien', adminViews.timNhanVien, name='timNhanVien'),
+    path('ketquatimNhanVien', adminViews.ketquatimNhanVien, name='ketquatimNhanVien'), 
     
     path('themGiaoVien', adminViews.themGiaoVien),
     path('luuGiaoVien', adminViews.luuGiaoVien),
@@ -31,7 +33,9 @@ urlpatterns = [
     path('chinhsuaGiaoVien/<str:mand>', adminViews.chinhsuaGiaoVien, name='chinhsuaGiaoVien'),
     path('luuchinhsuaGiaoVien', adminViews.luuchinhsuaGiaoVien, name='luuchinhsuaGiaoVien'),
     path('xoaGiaoVien/<str:mand>', adminViews.xoaGiaoVien, name='xoaGiaoVien'),
-    path('luuxoaGiaoVien', adminViews.luuXoaGiaoVien, name='luuxoaGiaoVien'),    
+    path('luuxoaGiaoVien', adminViews.luuXoaGiaoVien, name='luuxoaGiaoVien'),  
+    path('timGiaoVien', adminViews.timGiaoVien, name='timGiaoVien'),
+    path('ketquatimGiaoVien', adminViews.ketquatimGiaoVien, name='ketquatimGiaoVien'),  
     
     path('themMonHoc', adminViews.themMonHoc),
     path('luuMonHoc', adminViews.luuMonHoc),
@@ -40,6 +44,8 @@ urlpatterns = [
     path('luuchinhsuaMonHoc', adminViews.luuchinhsuaMonHoc, name='luuchinhsuaMonHoc'),
     path('xoaMonHoc/<str:mamonhoc>', adminViews.xoaMonHoc, name='xoaMonHoc'),
     path('luuxoaMonHoc', adminViews.luuXoaMonHoc, name='luuxoaMonHoc'),
+    path('timMonHoc', adminViews.timMonHoc, name='timMonhoc'),
+    path('ketquatimMonHoc', adminViews.ketquatimMonHoc, name='ketquatimMonHoc'),
     
     path('themLop', adminViews.themLop),
     path('luuLop', adminViews.luuLop),
@@ -48,6 +54,8 @@ urlpatterns = [
     path('luuchinhsuaLop', adminViews.luuchinhsuaLop, name='luuchinhsuaLop'),
     path('xoaLop/<str:malop>', adminViews.xoaLop, name='xoaLop'),
     path('luuxoaLop', adminViews.luuXoaLop, name='luuxoaLop'),
+    path('timLop', adminViews.timLop, name='timLop'),
+    path('ketquatimLop', adminViews.ketquatimLop, name='ketquatimLop'),
     
     path('NVthemGiaoVien', nhanvienViews.themGiaoVien),
     path('NVluuGiaoVien', nhanvienViews.luuGiaoVien),
@@ -56,7 +64,9 @@ urlpatterns = [
     path('NVluuchinhsuaGiaoVien', nhanvienViews.luuchinhsuaGiaoVien, name='NVluuchinhsuaGiaoVien'),
     path('NVxoaGiaoVien/<str:mand>', nhanvienViews.xoaGiaoVien, name='NVxoaGiaoVien'),
     path('NVluuxoaGiaoVien', nhanvienViews.luuXoaGiaoVien, name='NVluuxoaGiaoVien'),
-    
+    path('NVtimGiaoVien', nhanvienViews.timGiaoVien, name='NVtimGiaoVien'),
+    path('NVketquatimGiaoVien', nhanvienViews.ketquatimGiaoVien, name='NVketquatimGiaoVien'),
+        
     path('NVthemLop', nhanvienViews.themLop),
     path('NVluuLop', nhanvienViews.luuLop),
     path('NVquanlyLop', nhanvienViews.quanlyLop),
@@ -64,6 +74,8 @@ urlpatterns = [
     path('NVluuchinhsuaLop', nhanvienViews.luuchinhsuaLop, name='NVluuchinhsuaLop'),
     path('NVxoaLop/<str:malop>', nhanvienViews.xoaLop, name='NVxoaLop'),
     path('NVluuxoaLop', nhanvienViews.luuXoaLop, name='NVluuxoaLop'),
+    path('NVtimLop', nhanvienViews.timLop, name='NVtimLop'),
+    path('NVketquatimLop', nhanvienViews.ketquatimLop, name='NVketquatimLop'),
     
     path('themHocSinh', giaovienViews.themHocSinh),
     path('luuHocSinh', giaovienViews.luuHocSinh),

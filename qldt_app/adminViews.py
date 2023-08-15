@@ -329,7 +329,53 @@ def luuXoaLop(request):
         except:
             return HttpResponseRedirect("/quanlyLop")
 
-        
+def timGiaoVien(request):
+    return render(request,"admin_templates/timGiaoVien.html")
+
+def ketquatimGiaoVien(request):
+    tengv=request.POST.get('tengv')
+    try:
+        giaovien=nguoiDung.objects.get(hovaten=tengv)
+        return render(request, "admin_templates/ketquatimGiaoVien.html", {'giaovien': giaovien})
+    except:
+        messages.error(request,"Khong tim duoc giao vien")
+        return render(request, "admin_templates/timGiaoVien.html")
+    
+def timNhanVien(request):
+    return render(request,"admin_templates/timNhanVien.html")
+
+def ketquatimNhanVien(request):
+    tennv=request.POST.get('tennv')
+    try:
+        nhanvien=nguoiDung.objects.get(hovaten=tennv)
+        return render(request, "admin_templates/ketquatimNhanVien.html", {'nhanvien': nhanvien})
+    except:
+        messages.error(request,"Khong tim duoc nhan vien")
+        return render(request, "admin_templates/timNhanVien.html")
+    
+def timLop(request):
+    return render(request,"admin_templates/timLop.html")
+
+def ketquatimLop(request):
+    tenlop=request.POST.get('tenlop')
+    try:
+        v_lop=lop.objects.get(tenlop=tenlop)
+        return render(request, "admin_templates/ketquatimLop.html", {'v_lop': v_lop})
+    except:
+        messages.error(request,"Khong tim duoc lop")
+        return render(request, "admin_templates/timLop.html")
+    
+def timMonHoc(request):
+    return render(request,"admin_templates/timMonHoc.html")
+
+def ketquatimMonHoc(request):
+    tenmonhoc=request.POST.get('tenmonhoc')
+    try:
+        monhoc=monHoc.objects.get(tenmonhoc=tenmonhoc)
+        return render(request, "admin_templates/ketquatimMonHoc.html", {'monhoc': monhoc})
+    except:
+        messages.error(request,"Khong tim duoc lop")
+        return render(request, "admin_templates/timMonHoc.html")           
 
         
     
