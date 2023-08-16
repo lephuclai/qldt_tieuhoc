@@ -16,4 +16,4 @@ Mo terminal o trong code editor/IDE va chay cac lenh (doi voi Linux):
 - ` python manage.py createsuperuser `
 
 4. Chay server cho webapp
-- ` python manage.py runserver localhost:800 `
+- ` python manage.py runserver localhost:8000 `
