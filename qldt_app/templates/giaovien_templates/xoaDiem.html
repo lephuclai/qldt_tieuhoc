@@ -1,6 +1,6 @@
 {% extends 'giaovien_templates/base.html' %}
 {% block page_title %}
-Xoa hoc sinh
+Xóa điểm
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Xoa hoc sinh
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Xoa hoc sinh</h3>
+                <h3 class="card-title">Xoá điểm</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,33 +19,33 @@ Xoa hoc sinh
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ho va ten</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten" value="{{ v_diem.mahs.hovaten }}">
                         <input type="hidden"  name="maxulydiem" value="{{ v_diem.maxulydiem }}">
                     </div>
 
                     <div class="form-group">
-                        <label>Ma hoc sinh</label>
+                        <label>Mã học sinh</label>
                         <input type="text" class="form-control" name="mahs" placeholder="Ma hoc sinh" value="{{ v_diem.mahs.mahs }}" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label>Ngay sinh</label>
+                        <label>Ngày sinh</label>
                         <input type="text" class="form-control" name="ngaysinh" placeholder="Ngay sinh" value="{{ v_diem.mahs.ngaysinh }}" readonly>
                     </div>
                     
                     <div class="form-group">
-                        <label>Ten mon hoc</label>
+                        <label>Tên môn học</label>
                         <input type="text" class="form-control" name="tenmonhoc" placeholder="Ten mon hoc" value="{{ v_diem.mamonhoc.tenmonhoc }}" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label>Muc dat duoc</label>
+                        <label>Mức đạt được</label>
                         <input type="text" class="form-control" name="mucdatduoc" placeholder="Muc dat duoc" value="{{ v_diem.mucdatduoc }}" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label>Diem kiem tra dieu kien</label>
+                        <label>Điểm kiểm tra điều kiện</label>
                         <input type="text" class="form-control" name="diem" placeholder="Diem" value="{{ v_diem.diem }}" readonly>
                     </div>
                     

@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Chinh sua lop  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
+Chinh sua Môn học
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Chinh sua lop  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Staff</h3>
+                <h3 class="card-title">Chỉnh sửa Môn học</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,13 +19,13 @@ Chinh sua lop  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ten mon hoc</label>
+                        <label>Tên môn học</label>
                         <input type="text" class="form-control" name="tenmonhoc" placeholder="Ten mon hoc" value="{{ monhoc.tenmonhoc }}">
                         <input type="hidden"  name="mamonhoc" value="{{ monhoc.mamonhoc }}">
                     </div>
 
                     <div class="form-group">
-                        <label>So tiet</label>
+                        <label>Số tiết</label>
                         <input type="number" class="form-control" name="sotiet" placeholder="So tiet" value="{{ monhoc.sotiet }}">
                     </div>
  
@@ -46,7 +46,7 @@ Chinh sua lop  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Save Staff</button>
+                  <button type="submit" class="btn btn-primary btn-block">Lưu chỉnh sửa</button>
                 </div>
               </form>
             </div>

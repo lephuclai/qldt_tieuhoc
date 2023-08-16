@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.admin.mand }}
+Xóa nhân viên
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.ad
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Xoa nhan vien</h3>
+                <h3 class="card-title">Xóa nhân viên</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.ad
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ho va ten</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten" value="{{ nhanvien.admin.hovaten }}" readonly>
                         <input type="hidden"  name="mand" value="{{ nhanvien.admin.mand }}" readonly>
                     </div>
@@ -30,14 +30,14 @@ Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.ad
                     </div>
 
                     <div class="form-group">
-                        <label>Vi tri</label>
+                        <label>Vị trí</label>
                         <input type="text" class="form-control" name="vitri" placeholder="Vi tri" value="{{ nhanvien.vitri }}" readonly>
                     </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(176, 0, 0);">Xoa nhan vien</button>
+                  <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(176, 0, 0);">Xóa nhân viên</button>
                 </div>
               </form>
             </div>

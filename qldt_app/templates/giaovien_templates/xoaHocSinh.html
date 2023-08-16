@@ -1,6 +1,6 @@
 {% extends 'giaovien_templates/base.html' %}
 {% block page_title %}
-Xoa hoc sinh
+Xóa học sinh
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Xoa hoc sinh
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Xoa hoc sinh</h3>
+                <h3 class="card-title">Xóa học sinh</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,13 +19,13 @@ Xoa hoc sinh
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ho va ten</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten" value="{{ hocsinh.hovaten }}" readonly>
                         <input type="hidden"  name="mahs" value="{{ hocsinh.mahs }}" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label>Ngay sinh</label>
+                        <label>Ngày sinh</label>
                         <input type="text" class="form-control" name="ngaysinh" placeholder="Ngay sinh" value="{{ hocsinh.ngaysinh }}" readonly>
                     </div>
                     
@@ -33,7 +33,7 @@ Xoa hoc sinh
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(176, 0, 0);">Xoa hoc sinh</button>
+                  <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(176, 0, 0);">Xóa học sinh</button>
                 </div>
               </form>
             </div>

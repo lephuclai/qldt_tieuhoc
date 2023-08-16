@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Quan ly mon hoc
+Quản lý môn học
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -12,7 +12,7 @@ Quan ly mon hoc
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Thong mon hoc</h3>
+                <h3 class="card-title">Thông tin môn học</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -29,10 +29,10 @@ Quan ly mon hoc
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>Ma mon hoc</th>
-                      <th>Ten mon hoc</th>
-                      <th>So tiet</th>
-                      <th>Hanh dong</th>
+                      <th>Mã môn học</th>
+                      <th>Tên môn học</th>
+                      <th>Số tiết</th>
+                      <th>Hành động</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -42,8 +42,8 @@ Quan ly mon hoc
                       <td>{{ entry.tenmonhoc }}</td>
                       <td>{{ entry.sotiet }}</td>
                       <td>
-                        <a href="/chinhsuaMonHoc/{{ entry.mamonhoc }}" class="btn btn-success">Sua</a>
-                        <a href="/xoaMonHoc/{{ entry.mamonhoc }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xoa</a>
+                        <a href="/chinhsuaMonHoc/{{ entry.mamonhoc }}" class="btn btn-success">Sửa</a>
+                        <a href="/xoaMonHoc/{{ entry.mamonhoc }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xóa</a>
                     </td>
                     </tr>
                   {% endfor %}

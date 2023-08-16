@@ -1,6 +1,6 @@
 {% extends 'giaovien_templates/base.html' %}
 {% block page_title %}
-Thong ke diem lop
+Thống kê điểm lớp
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -10,7 +10,7 @@ Thong ke diem lop
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Teacher Details</h3>
+                <h3 class="card-title">Thống kê điểm lớp</h3>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
@@ -25,12 +25,12 @@ Thong ke diem lop
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>Ma xu ly diem</th>
-                      <th>Ma HS</th>
-                      <th>Ten mon hoc</th>
-                      <th>Muc dat duoc</th>
-                      <th>Diem kiem tra dieu kien</th>
-                      <th>Hanh dong</th>
+                      <th>Mã xử lý điểm</th>
+                      <th>Mã HS</th>
+                      <th>Tên môn học</th>
+                      <th>Mức đạt được</th>
+                      <th>Điểm kiểm tra điều kiện</th>
+                      <th>Hành động</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -44,8 +44,8 @@ Thong ke diem lop
                       <td>{{ entry.mucdatduoc }}</td>
                       <td>{{ entry.diem}}</td>
                       <td>
-                        <a href="/chinhsuaDiem/{{ entry.maxulydiem }}" class="btn btn-success">Sua</a>
-                        <a href="/xoaDiem/{{ entry.maxulydiem }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xoa</a>
+                        <a href="/chinhsuaDiem/{{ entry.maxulydiem }}" class="btn btn-success">Sửa</a>
+                        <a href="/xoaDiem/{{ entry.maxulydiem }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xóa</a>
                       </td>
                     </tr>
                   {% endif %}

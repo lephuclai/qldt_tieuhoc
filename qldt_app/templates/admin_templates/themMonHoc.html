@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Them mon hoc
+Thêm môn học
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Them mon hoc
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Them lop hoc</h3>
+                <h3 class="card-title">Thêm lớp học</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,12 +19,12 @@ Them mon hoc
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ten mon hoc</label>
+                        <label>Tên môn học</label>
                         <input type="text" class="form-control" name="tenmonhoc" placeholder="Ten mon hoc">
                     </div>
 
                     <div class="form-group">
-                        <label>So tiet</label>
+                        <label>Số tiết</label>
                         <input type="number" class="form-control" name="sotiet" placeholder="So tiet">
                     </div>
                     
@@ -45,7 +45,7 @@ Them mon hoc
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Add Staff</button>
+                  <button type="submit" class="btn btn-primary btn-block">Thêm môn học</button>
                 </div>
               </form>
             </div>

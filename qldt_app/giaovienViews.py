@@ -43,10 +43,10 @@ def luuHocSinh(request):
             lop_obj=lop.objects.get(tenlop=tenlop)
             hocsinhmoi.malop=lop_obj
             hocsinhmoi.save()
-            messages.success(request,"Successfully Added Staff")
+            messages.success(request,"Thêm học sinh thành công")
             return HttpResponseRedirect("/themHocSinh")
         except:
-            messages.error(request,"Failed to Add Staff")
+            messages.error(request,"Thêm học sinh không thành công")
             return HttpResponseRedirect("/themHocSinh")    
 
 def quanlyHocSinh(request):
@@ -86,10 +86,10 @@ def luuchinhsuaHocSinh(request):
             hocsinh.emailme=emailme
             hocsinh.save()
 
-            messages.success(request,"Successfully Edited Staff")
+            messages.success(request,"Chỉnh sửa học sinh thành công")
             return HttpResponseRedirect("/chinhsuaHocSinh/" + str(hocsinh.mahs))
         except:
-            messages.error(request,"Failed to Edit Staff")
+            messages.error(request,"Chỉnh sửa học sinh không thành công")
             return HttpResponseRedirect("/chinhsuaHocSinh/" + str(hocsinh.mahs))
         
 def xoaHocSinh(request, mahs):
@@ -132,10 +132,10 @@ def luuDiem(request):
             diemmoi.mamonhoc=monhoc_obj
             diemmoi.save()
 
-            messages.success(request,"Them diem thanh cong")
+            messages.success(request,"Thêm điểm thành công")
             return HttpResponseRedirect("/themDiem/" + str(mahs))
         except:
-            messages.error(request,"Them diem that bai")
+            messages.error(request,"Thêm điểm không thành công")
             return HttpResponseRedirect("/themDiem/" + str(mahs))
         
 def quanlyDiem(request, mahs):
@@ -160,10 +160,10 @@ def luuchinhsuaDiem(request):
             suadiem.mucdatduoc=mucdatduoc
             suadiem.diem=diemmoi
             suadiem.save()
-            messages.success(request,"Successfully Edited Staff")
+            messages.success(request,"Chỉnh sửa điểm thành công")
             return HttpResponseRedirect("/chinhsuaDiem/" + str(suadiem.maxulydiem))
         except:
-            messages.error(request,"Failed to Edit Staff")
+            messages.error(request,"Chỉnh sửa điểm không thành công")
             return HttpResponseRedirect("/chinhsuaDiem/" + str(suadiem.maxulydiem))
         
 def xoaDiem(request, maxulydiem):
@@ -191,7 +191,7 @@ def ketquatimHocSinh(request):
         hocsinh=hocSinh.objects.get(hovaten=tenhs)
         return render(request, "giaovien_templates/ketquatimHocSinh.html", {'hocsinh': hocsinh})
     except:
-        messages.error(request,"Khong tim duoc hoc sinh")
+        messages.error(request,"Không tìm được học sinh")
         return render(request, "giaovien_template/timHocSinh.html")
         
     

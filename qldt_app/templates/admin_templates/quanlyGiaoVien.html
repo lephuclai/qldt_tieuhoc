@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Manage Teacher
+Quản lý giáo viên
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -12,7 +12,7 @@ Manage Teacher
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Teacher Details</h3>
+                <h3 class="card-title">Thông tin giáo viên</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -29,18 +29,18 @@ Manage Teacher
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>MaGV</th>
-                      <th>Ho va ten</th>
-                      <th>Mon hoc giang day</th>
-                      <th>Lop chu nhiem</th>
-                      <th>Ngay sinh</th>
-                      <th>Gioi tinh</th>
-                      <th>Dia chi</th>
+                      <th>Mã GV</th>
+                      <th>Họ và tên</th>
+                      <th>Môn học giảng dạy</th>
+                      <th>Lớp chủ nhiệm</th>
+                      <th>Ngày sinh</th>
+                      <th>Giới tính</th>
+                      <th>Địa chỉ</th>
                       <th>CCCD</th>
                       <th>Email</th>
-                      <th>So dien thoai</th>
-                      <th>Ngay bat dau</th>
-                      <th>Hanh dong</th>
+                      <th>Số điện thoại</th>
+                      <th>Ngày bắt đầu</th>
+                      <th>Hành động</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -58,8 +58,8 @@ Manage Teacher
                       <td>{{ entry.admin.sdt }}</td>
                       <td>{{ entry.admin.ngaybatdau }}</td>
                       <td>
-                        <a href="/chinhsuaGiaoVien/{{ entry.admin.mand }}" class="btn btn-success">Sua</a>
-                        <a href="/xoaGiaoVien/{{ entry.admin.mand }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xoa</a>
+                        <a href="/chinhsuaGiaoVien/{{ entry.admin.mand }}" class="btn btn-success">Sửa</a>
+                        <a href="/xoaGiaoVien/{{ entry.admin.mand }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xóa</a>
                     </td>
                     </tr>
                   {% endfor %}

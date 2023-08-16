@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Add Staff
+Thêm nhân viên
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Add Staff
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Add Staff</h3>
+                <h3 class="card-title">Thêm nhân viên</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ Add Staff
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ho va ten</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten">
                     </div>
 
@@ -29,22 +29,22 @@ Add Staff
                   </div>
 
                     <div class="form-group">
-                        <label>Ngay sinh</label>
+                        <label>Ngày sinh</label>
                         <input type="date" class="form-control" name="ngaysinh" placeholder="Ngay sinh">
                     </div>
 
                     <div class="form-group">
-                      <label>Gioi tinh</label>
+                      <label>Giới tính</label>
                       <input type="text" class="form-control" name="gioitinh" placeholder="Gioi tinh">
                     </div>
 
                     <div class="form-group">
-                      <label>Dia chi</label>
+                      <label>Địa chỉ</label>
                       <input type="text" class="form-control" name="diachi" placeholder="Dia chi">
                     </div>
 
                     <div class="form-group">
-                      <label>Can cuoc cong dan</label>
+                      <label>CCCD</label>
                       <input type="text" class="form-control" name="cccd" placeholder="Can cuoc cong dan">
                     </div>
 
@@ -59,17 +59,17 @@ Add Staff
                     </div>
                     
                     <div class="form-group">
-                      <label>So dien thoai</label>
+                      <label>Số điện thoại</label>
                       <input type="text" class="form-control" name="sdt" placeholder="So dien thoai">
                     </div>
                     
                     <div class="form-group">
-                      <label>Ngay bat dau</label>
+                      <label>Ngày bắt đầu</label>
                       <input type="date" class="form-control" name="ngaybatdau" placeholder="Ngay bat dau">
                     </div>     
                     
                     <div class="form-group">
-                      <label>Vi tri</label>
+                      <label>Vị trí</label>
                       <input type="text" class="form-control" name="vitri" placeholder="Vi tri">
                     </div>                    
                     
@@ -90,7 +90,7 @@ Add Staff
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Add Staff</button>
+                  <button type="submit" class="btn btn-primary btn-block">Thêm nhân viên</button>
                 </div>
               </form>
             </div>

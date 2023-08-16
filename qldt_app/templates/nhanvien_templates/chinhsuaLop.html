@@ -1,6 +1,6 @@
 {% extends 'nhanvien_templates/base.html' %}
 {% block page_title %}
-Chinh sua lop  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
+Chỉnh sửa lớp
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Chinh sua lop  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Staff</h3>
+                <h3 class="card-title">Chỉnh sửa lớp</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ Chinh sua lop  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ten lop</label>
+                        <label>Tên lớp</label>
                         <input type="text" class="form-control" name="tenlop" placeholder="Ten lop" value="{{ v_lop.tenlop }}">
                         <input type="hidden"  name="malop" value="{{ v_lop.malop }}">
                     </div>
@@ -41,7 +41,7 @@ Chinh sua lop  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Save Staff</button>
+                  <button type="submit" class="btn btn-primary btn-block">Lưu</button>
                 </div>
               </form>
             </div>

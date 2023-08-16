@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.admin.mand }}
+Chỉnh sửa Nhân viên
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.ad
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Staff</h3>
+                <h3 class="card-title">Chỉnh sửa Nhân viên</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.ad
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ho va ten</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten" value="{{ nhanvien.admin.hovaten }}">
                         <input type="hidden"  name="mand" value="{{ nhanvien.admin.mand }}">
                     </div>
@@ -35,12 +35,12 @@ Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.ad
                     </div> -->
                     
                     <div class="form-group">
-                        <label>Gioi tinh</label>
+                        <label>Giới tính</label>
                         <input type="text" class="form-control" name="gioitinh" placeholder="Gioi tinh" value="{{ nhanvien.admin.gioitinh }}">
                     </div>
 
                     <div class="form-group">
-                        <label>Dia chi</label>
+                        <label>Địa chỉ</label>
                         <input type="text" class="form-control" name="diachi" placeholder="Dia chi" value="{{ nhanvien.admin.diachi }}">
                     </div>
 
@@ -60,7 +60,7 @@ Edit Staff  | Username : {{ nhanvien.admin.username }} |  #MAND : {{ nhanvien.ad
                     </div>
 
                     <div class="form-group">
-                        <label>So dien thoai</label>
+                        <label>Số điện thoại</label>
                         <input type="text" class="form-control" name="sdt" placeholder="So dien thoai" value="{{ nhanvien.admin.sdt }}">
                     </div>
 

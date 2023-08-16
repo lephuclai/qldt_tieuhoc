@@ -1,6 +1,6 @@
 {% extends 'giaovien_templates/base.html' %}
 {% block page_title %}
-Manage Teacher
+Quản lý học sinh
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -12,7 +12,7 @@ Manage Teacher
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Teacher Details</h3>
+                <h3 class="card-title">Thông tin học sinh</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -29,18 +29,18 @@ Manage Teacher
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>MaHS</th>
-                      <th>Ho va ten</th>
-                      <th>Ngay sinh</th>
-                      <th>Gioi tinh</th>
-                      <th>Dia chi</th>
-                      <th>Ten bo</th>
-                      <th>SDT bo</th>
-                      <th>Email bo</th>
-                      <th>Ten me</th>
-                      <th>SDT me</th>
-                      <th>Email me</th>
-                      <th>Hanh dong</th>
+                      <th>Mã HS</th>
+                      <th>Họ và tên</th>
+                      <th>Ngày sinh</th>
+                      <th>Giới tính</th>
+                      <th>Địa chỉ</th>
+                      <th>Tên bố</th>
+                      <th>SĐT bố</th>
+                      <th>Email bố</th>
+                      <th>Tên mẹ</th>
+                      <th>SĐT mẹ</th>
+                      <th>Email mẹ</th>
+                      <th>Hành động</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -59,10 +59,10 @@ Manage Teacher
                       <td>{{ entry.sdtme }}</td>
                       <td>{{ entry.emailme }}</td>
                       <td>
-                        <a href="/chinhsuaHocSinh/{{ entry.mahs }}" class="btn btn-success">Sua</a>
-                        <a href="/xoaHocSinh/{{ entry.mahs }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xoa</a>
-                        <a href="/themDiem/{{ entry.mahs }}" class="btn btn-success" style="background-color: rgb(193, 193, 4);">Them diem</a>
-                        <a href="/quanlyDiem/{{ entry.mahs }}" class="btn btn-success" style="background-color: rgb(0, 195, 255);">Xem diem</a>
+                        <a href="/chinhsuaHocSinh/{{ entry.mahs }}" class="btn btn-success">Sửa</a>
+                        <a href="/xoaHocSinh/{{ entry.mahs }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xóa</a>
+                        <a href="/themDiem/{{ entry.mahs }}" class="btn btn-success" style="background-color: rgb(193, 193, 4);">Thêm điểm</a>
+                        <a href="/quanlyDiem/{{ entry.mahs }}" class="btn btn-success" style="background-color: rgb(0, 195, 255);">Xem điểm</a>
                     </td>
                     </tr>
                   {% endif %}

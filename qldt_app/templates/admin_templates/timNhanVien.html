@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Tim nhan vien
+Tìm nhân viên
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Tim nhan vien
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Staff</h3>
+                <h3 class="card-title">Tìm nhân viên</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ Tim nhan vien
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ho va ten</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" name="tennv" placeholder="Ho va ten">
                     </div>  
  
@@ -40,7 +40,7 @@ Tim nhan vien
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Tim hoc sinh</button>
+                  <button type="submit" class="btn btn-primary btn-block">Tìm</button>
                 </div>
               </form>
             </div>

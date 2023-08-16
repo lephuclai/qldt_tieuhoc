@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-Them lop hoc
+Thêm lớp học
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Them lop hoc
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Them lop hoc</h3>
+                <h3 class="card-title">Thêm lớp học</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ Them lop hoc
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ten lop</label>
+                        <label>Tên lớp</label>
                         <input type="text" class="form-control" name="tenlop" placeholder="Ten lop">
                     </div>
                     
@@ -40,7 +40,7 @@ Them lop hoc
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Add Staff</button>
+                  <button type="submit" class="btn btn-primary btn-block">Thêm lớp</button>
                 </div>
               </form>
             </div>

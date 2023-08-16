@@ -1,6 +1,6 @@
 {% extends 'giaovien_templates/base.html' %}
 {% block page_title %}
-Them diem
+Thêm điểm
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ Them diem
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Edit Staff</h3>
+                <h3 class="card-title">Thêm điểm</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,32 +19,32 @@ Them diem
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ho va ten</label>
+                        <label>Họ và tên</label>
                         <input type="text" class="form-control" name="hovaten" placeholder="Ho va ten" value="{{ hocsinh.hovaten }}" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label>Ma hoc sinh</label>
+                        <label>Mã học sinh</label>
                         <input type="text" class="form-control" name="mahs" placeholder="Ma hoc sinh" value="{{ hocsinh.mahs }}" readonly>
                     </div>
 
                     <div class="form-group">
-                        <label>Ngay sinh</label>
+                        <label>Ngày sinh</label>
                         <input type="text" class="form-control" name="ngaysinh" placeholder="Ngay sinh" value="{{ hocsinh.ngaysinh }}" readonly>
                     </div>
                     
                     <div class="form-group">
-                        <label>Ten mon hoc</label>
+                        <label>Tên môn học</label>
                         <input type="text" class="form-control" name="tenmonhoc" placeholder="Ten mon hoc">
                     </div>
 
                     <div class="form-group">
-                        <label>Muc dat duoc</label>
+                        <label>Mức đạt được</label>
                         <input type="text" class="form-control" name="mucdatduoc" placeholder="Muc dat duoc">
                     </div>
 
                     <div class="form-group">
-                        <label>Diem kiem tra dieu kien</label>
+                        <label>Điểm kiểm tra điều kiện</label>
                         <input type="text" class="form-control" name="diem" placeholder="Diem">
                     </div>
                             
@@ -66,7 +66,7 @@ Them diem
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block">Save Staff</button>
+                  <button type="submit" class="btn btn-primary btn-block">Lưu</button>
                 </div>
               </form>
             </div>

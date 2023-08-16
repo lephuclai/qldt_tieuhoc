@@ -1,6 +1,6 @@
 {% extends 'admin_templates/base.html' %}
 {% block page_title %}
-CHINH SUA LOP  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
+Xóa lớp
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -11,7 +11,7 @@ CHINH SUA LOP  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Xoa lop</h3>
+                <h3 class="card-title">Xóa lớp</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -19,7 +19,7 @@ CHINH SUA LOP  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
                   {% csrf_token %}
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Ten lop</label>
+                        <label>Tên lớp</label>
                         <input type="text" class="form-control" name="tenlop" placeholder="Ten lop" value="{{ v_lop.tenlop }}" readonly>
                         <input type="hidden"  name="malop" value="{{ v_lop.malop }}" readonly>
                     </div>
@@ -27,7 +27,7 @@ CHINH SUA LOP  | Ten lop : {{ v_lop.tenlop }} |  #MALOP : {{ v_lop.malop }}
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(176, 0, 0);">Xoa lop</button>
+                  <button type="submit" class="btn btn-primary btn-block" style="background-color: rgb(176, 0, 0);">Xóa</button>
                 </div>
               </form>
             </div>

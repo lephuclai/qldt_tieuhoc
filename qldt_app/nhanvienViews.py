@@ -35,10 +35,10 @@ def luuGiaoVien(request):
             lop_obj=lop.objects.get(tenlop=tenlop)
             giaovienmoi.giaovien.malop=lop_obj
             giaovienmoi.save()
-            messages.success(request,"Successfully Added Staff")
+            messages.success(request,"Thêm giáo viên thành công")
             return HttpResponseRedirect("/NVthemGiaoVien")
         except:
-            messages.error(request,"Failed to Add Staff")
+            messages.error(request,"Thêm giáo viên không thành công")
             return HttpResponseRedirect("/NVthemGiaoVien")   
         
 def quanlyGiaoVien(request):
@@ -88,10 +88,10 @@ def luuchinhsuaGiaoVien(request):
             giaovien_model.malop=lop_obj
             giaovien_model.save()
 
-            messages.success(request,"Successfully Edited Staff")
+            messages.success(request,"Chỉnh sửa giáo viên thành công")
             return HttpResponseRedirect("/NVchinhsuaGiaoVien/" + str(nguoidung.mand))
         except:
-            messages.error(request,"Failed to Edit Staff")
+            messages.error(request,"Chỉnh sửa giáo viên không thành công")
             return HttpResponseRedirect("/NVchinhsuaGiaoVien/" + str(nguoidung.mand))
         
 def xoaGiaoVien(request, mand):
@@ -123,10 +123,10 @@ def luuLop(request):
         try:
             lopmoi=lop.objects.create(tenlop=tenlop)
             lopmoi.save()
-            messages.success(request,"Successfully Added Staff")
+            messages.success(request,"Thêm lớp thành công")
             return HttpResponseRedirect("/NVthemLop")
         except:
-            messages.error(request,"Failed to Add Staff")
+            messages.error(request,"Thêm lớp không thành công")
             return HttpResponseRedirect("/NVthemLop")   
         
 def quanlyLop(request):
@@ -149,10 +149,10 @@ def luuchinhsuaLop(request):
             v_lop.tenlop=tenlop
             v_lop.save()
 
-            messages.success(request,"Successfully Edited Staff")
+            messages.success(request,"Chỉnh sửa lớp thành công")
             return HttpResponseRedirect("/NVchinhsuaLop/" + str(v_lop.malop))
         except:
-            messages.error(request,"Failed to Edit Staff")
+            messages.error(request,"Chỉnh sửa lớp không thành công")
             return HttpResponseRedirect("/NVchinhsuaLop/" + str(v_lop.malop))
         
 def xoaLop(request, malop):
@@ -180,7 +180,7 @@ def ketquatimGiaoVien(request):
         giaovien=nguoiDung.objects.get(hovaten=tengv)
         return render(request, "nhanvien_templates/ketquatimGiaoVien.html", {'giaovien': giaovien})
     except:
-        messages.error(request,"Khong tim duoc giao vien")
+        messages.error(request,"Không tìm được giáo viên")
         return render(request, "nhanvien_templates/timGiaoVien.html")
     
 def timLop(request):
@@ -192,5 +192,5 @@ def ketquatimLop(request):
         v_lop=lop.objects.get(tenlop=tenlop)
         return render(request, "nhanvien_templates/ketquatimLop.html", {'v_lop': v_lop})
     except:
-        messages.error(request,"Khong tim duoc lop")
+        messages.error(request,"Không tìm được lớp")
         return render(request, "nhanvien_templates/timLop.html")

@@ -1,6 +1,6 @@
 {% extends 'nhanvien_templates/base.html' %}
 {% block page_title %}
-Ket qua tim lop
+Kết quả tìm lớp
 {% endblock page_title %}
 {% block main_content %}
     <!-- Main content -->
@@ -12,7 +12,7 @@ Ket qua tim lop
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Ket qua tim lop</h3>
+                <h3 class="card-title">Kết quả tìm lớp</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -29,9 +29,9 @@ Ket qua tim lop
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                        <th>Ma Lop</th>
-                        <th>Ten lop</th>
-                        <th>Hanh dong</th>
+                        <th>Mã Lop</th>
+                        <th>Tên lớp</th>
+                        <th>Hành động</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -39,8 +39,8 @@ Ket qua tim lop
                         <td>{{ v_lop.malop }}</td>
                         <td>{{ v_lop.tenlop }}</td>
                         <td>
-                          <a href="/NVchinhsuaLop/{{ v_lop.malop }}" class="btn btn-success">Sua</a>
-                          <a href="/NVxoaLop/{{ v_lop.malop }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xoa</a>
+                          <a href="/NVchinhsuaLop/{{ v_lop.malop }}" class="btn btn-success">Sửa</a>
+                          <a href="/NVxoaLop/{{ v_lop.malop }}" class="btn btn-success" style="background-color: rgb(176, 0, 0);">Xóa</a>
                       </td>
                       </tr>
                   </tbody>
