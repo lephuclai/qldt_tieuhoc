@@ -1,19 +1,44 @@
-# qldt_tieuhoc
+# Quản lý đào tạo trường tiểu học
 
-1. Tao database mysql:
-Tuy thuoc vao he dieu hanh moi nguoi tim cach tao database theo huong dan o tren mang. Chu y:
+# 1. Cài đặt
+
+- MySQL và MySQL Workbench
+- Django
+- Thư viện Python cần cài đặt: pymysql
+- Sửa lỗi khi chạy makemigrations (trên Linux)
+    - `pip install --upgrade setuptools`
+    - `pip install pymysql`
+    - Trong file [init.py](http://init.py) (cùng thư mục với settings.py):
+        
+        ```python
+        import pymysql
+        pymysql.install_as_MySQLdb()
+        ```
+        
+
+# 2. Tạo cơ sở dữ liệu:
+
+Cơ sở dữ liệu cần phải đặt các thông tin như sau:
+
 - database name: qldt
 - user: qldt
 - password: qldt123L!
 
-2. Tao cac bang
-Mo terminal o trong code editor/IDE va chay cac lenh (doi voi Linux):
-- ` python manage.py makemigrations qldt_app `
-- ` python manage.py migrate `
+# 3. Tạo các bảng trong cơ sở dữ liệu
 
-3. Tao tai khoan admin
-Mo terminal o trong code editor/IDE va chay cac lenh (doi voi Linux):
-- ` python manage.py createsuperuser `
+Chạy các lệnh sau ở terminal:
 
-4. Chay server cho webapp
-- ` python manage.py runserver localhost:8000 `
+- `python manage.py makemigrations qldt_app`
+- `python manage.py migrate`
+
+# 4. Tạo tài khoản admin:
+
+Chạy lệnh sau để tạo tài khoản admin: `python manage.py createsuperuser`
+
+Sau đó thực hiện nhập email và mật khẩu ở trên terminal
+
+# 5. Chạy server cho webapp:
+
+Chạy lệnh sau ở terminal: `python manage.py runserver localhost:8000`
+
+Có thể đổi cổng 8000 thành cổng khác tùy thuộc vào mục đích
